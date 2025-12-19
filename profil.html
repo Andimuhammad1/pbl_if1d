@@ -3,139 +3,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Pengguna - Web Portfolio</title>
+  <title>Halaman Profil</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fb;
       margin: 0;
+      padding: 0;
+    }
+
+    .profile-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar button {
+      padding: 15px;
       color: #333;
+      text-align: left;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 15px;
     }
 
-    header {
-      background-color: #222;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .sidebar button:hover {
+      background-color: #f0f0f0;
     }
 
-    header a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
+    .sidebar button.active {
+      background-color: #3498db;
+      color: #fff;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .content {
+      flex: 1;
       padding: 30px;
+      background: #fff;
+      margin: 20px;
+      border-radius: 10px;
     }
 
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
+    .hidden {
+      display: none;
     }
 
-    .profile-info {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 40px;
+    .upload-section {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    .profile-info img {
+    .profile-pic {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      object-fit: cover;
+      margin-bottom: 10px;
     }
 
-    .profile-info div {
-      flex: 1;
+    .upload-btn {
+      background-color: #3498db;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    .project-list {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
     }
 
-    .card {
-      background: #f1f1f1;
-      border-radius: 10px;
-      padding: 20px;
-      flex: 1 1 calc(33% - 20px);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
 
-    footer {
-      background-color: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    .btn-group {
+      margin-top: 20px;
     }
 
-    footer a {
-      color: #bbb;
-      text-decoration: none;
-      margin: 0 10px;
+    button.cancel, button.save {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.cancel {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+
+    button.save {
+      background-color: #3498db;
+      color: #fff;
+      margin-left: 10px;
     }
   </style>
 </head>
 <body>
+  <div class="profile-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="active" data-section="profil">Informasi Profil</button>
+      <button data-section="password">Ganti Kata Sandi</button>
+      <button data-section="lainnya">Informasi Lainnya</button>
+      <button data-section="sosmed">Sosial Media</button>
+    </aside>
 
-  <header>
-    <h2>Profil Pengguna</h2>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="profile.html">Profil</a>
-      <a href="login.html">Logout</a>
-    </nav>
-  </header>
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Informasi Profil -->
+      <section id="profil">
+        <h2>Informasi Profil</h2>
 
-  <div class="container">
-    <div class="profile-info">
-      <img src="https://via.placeholder.com/120" alt="Foto Profil">
-      <div>
-        <h3>Nama Pengguna</h3>
-        <p><strong>NIM:</strong> 123456789</p>
-        <p><strong>Email:</strong> user@example.com</p>
-      </div>
-    </div>
+        <div class="upload-section">
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto Profil" class="profile-pic" id="profilePic">
+          <br>
+          <button class="upload-btn" id="uploadBtn">Unggah Foto Profil</button>
+          <input type="file" id="uploadInput" accept="image/*" style="display:none;">
+        </div>
 
-    <h2>Proyek Terbaru</h2>
-    <div class="project-list">
-      <div class="card">
-        <h4>Proyek A</h4>
-        <p>Deskripsi singkat proyek.</p>
-      </div>
-      <div class="card">
-        <h4>Proyek B</h4>
-        <p>Deskripsi singkat proyek.</p>
-      </div>
-      <div class="card">
-        <h4>Proyek C</h4>
-        <p>Deskripsi singkat proyek.</p>
-      </div>
-    </div>
+        <form id="profilForm">
+          <label>Nama Lengkap</label>
+          <input type="text" id="nama">
 
-    <h2 style="margin-top:40px;">Riwayat Proyek</h2>
-    <ul>
-      <li>Desain Sistem Absensi (2024)</li>
-      <li>Dashboard Analisis Keuangan (2023)</li>
-      <li>Aplikasi Booking Spa Hijau (2022)</li>
-    </ul>
+          <label>NIM</label>
+          <input type="text" id="nim">
+
+          <label>Email</label>
+          <input type="email" id="email">
+
+          <label>Jurusan</label>
+          <input type="text" id="jurusan">
+
+          <div class="btn-group">
+            <button type="button" class="save" id="saveProfil">Simpan</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Ganti Kata Sandi -->
+      <section id="password" class="hidden">
+        <h2>Ganti Kata Sandi</h2>
+        <form id="passwordForm">
+          <label>Kata Sandi Lama</label>
+          <input type="password" id="oldPass">
+
+          <label>Kata Sandi Baru</label>
+          <input type="password" id="newPass">
+
+          <label>Konfirmasi Kata Sandi</label>
+          <input type="password" id="confirmPass">
+
+          <div class="btn-group">
+            <button type="reset" class="cancel">Batal</button>
+            <button type="button" class="save" id="savePass">Simpan</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Informasi Lainnya -->
+      <section id="lainnya" class="hidden">
+        <h2>Informasi Lainnya</h2>
+        <form id="infoForm">
+          <label>Deskripsi Diri</label>
+          <textarea id="deskripsi" rows="3"></textarea>
+
+          <label>Riwayat Pendidikan SMA</label>
+          <input type="text" id="sma">
+
+          <label>Universitas</label>
+          <input type="text" id="univ">
+
+          <label>Catatan Prestasi</label>
+          <textarea id="prestasi" rows="2"></textarea>
+
+          <div class="btn-group">
+            <button type="button" class="save" id="saveInfo">Simpan</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Sosial Media -->
+      <section id="sosmed" class="hidden">
+        <h2>Sosial Media</h2>
+        <form id="sosmedForm">
+          <label>LinkedIn</label>
+          <input type="text" id="linkedin">
+
+          <label>Instagram</label>
+          <input type="text" id="instagram">
+
+          <div class="btn-group">
+            <button type="button" class="save" id="saveSosmed">Simpan</button>
+          </div>
+        </form>
+      </section>
+    </main>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Web Portfolio | <a href="#">Kebijakan Privasi</a> | <a href="#">Bantuan</a></p>
-  </footer>
+  <script>
+    // ======================
+    // AMBIL DATA USER DARI LOCALSTORAGE
+    // ======================
+    let user = JSON.parse(localStorage.getItem("loggedUser")) || {};
 
+    // Isi nilai default kalau belum ada
+    user = {
+      nim: user.nim || "3312301079",
+      nama: user.nama || "Nama Default",
+      email: user.email || "email@contoh.com",
+      jurusan: user.jurusan || "Belum diatur",
+      foto: user.foto || "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      deskripsi: user.deskripsi || "",
+      sma: user.sma || "",
+      univ: user.univ || "",
+      prestasi: user.prestasi || "",
+      linkedin: user.linkedin || "",
+      instagram: user.instagram || ""
+    };
+
+    // ======================
+    // TAMPILKAN DATA DI FORM
+    // ======================
+    document.getElementById("nim").value = user.nim;
+    document.getElementById("nama").value = user.nama;
+    document.getElementById("email").value = user.email;
+    document.getElementById("jurusan").value = user.jurusan;
+    document.getElementById("profilePic").src = user.foto;
+    document.getElementById("deskripsi").value = user.deskripsi;
+    document.getElementById("sma").value = user.sma;
+    document.getElementById("univ").value = user.univ;
+    document.getElementById("prestasi").value = user.prestasi;
+    document.getElementById("linkedin").value = user.linkedin;
+    document.getElementById("instagram").value = user.instagram;
+
+    // ======================
+    // SIMPAN PROFIL
+    // ======================
+    document.getElementById("saveProfil").addEventListener("click", () => {
+      user.nama = document.getElementById("nama").value;
+      user.nim = document.getElementById("nim").value;
+      user.email = document.getElementById("email").value;
+      user.jurusan = document.getElementById("jurusan").value;
+      localStorage.setItem("loggedUser", JSON.stringify(user));
+      alert("✅ Data profil berhasil disimpan!");
+    });
+
+    // ======================
+    // SIMPAN INFORMASI LAINNYA
+    // ======================
+    document.getElementById("saveInfo").addEventListener("click", () => {
+      user.deskripsi = document.getElementById("deskripsi").value;
+      user.sma = document.getElementById("sma").value;
+      user.univ = document.getElementById("univ").value;
+      user.prestasi = document.getElementById("prestasi").value;
+      localStorage.setItem("loggedUser", JSON.stringify(user));
+      alert("✅ Informasi lainnya berhasil disimpan!");
+    });
+
+    // ======================
+    // SIMPAN SOSIAL MEDIA
+    // ======================
+    document.getElementById("saveSosmed").addEventListener("click", () => {
+      user.linkedin = document.getElementById("linkedin").value;
+      user.instagram = document.getElementById("instagram").value;
+      localStorage.setItem("loggedUser", JSON.stringify(user));
+      alert("✅ Sosial media berhasil disimpan!");
+    });
+
+    // ======================
+    // UPLOAD FOTO PROFIL
+    // ======================
+    const uploadBtn = document.getElementById("uploadBtn");
+    const uploadInput = document.getElementById("uploadInput");
+    const profilePic = document.getElementById("profilePic");
+
+    uploadBtn.addEventListener("click", () => uploadInput.click());
+    uploadInput.addEventListener("change", function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          profilePic.src = e.target.result;
+          user.foto = e.target.result;
+          localStorage.setItem("loggedUser", JSON.stringify(user));
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // ======================
+    // NAVIGASI SIDEBAR
+    // ======================
+    const buttons = document.querySelectorAll(".sidebar button");
+    const sections = document.querySelectorAll("main section");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        sections.forEach(s => s.classList.add("hidden"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.section).classList.remove("hidden");
+      });
+    });
+  </script>
 </body>
 </html>
