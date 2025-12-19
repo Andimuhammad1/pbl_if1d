@@ -1,0 +1,93 @@
+<?php require "../app/middleware/auth.php"; ?>
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Dashboard</a>
+        <nav class="navbar">
+            <a href="#beranda">Beranda</a>
+
+            <!-- Dropdown Jurusan -->
+            <div class="dropdown">
+                <a href="#jurusan" class="dropbtn">Jurusan ▾</a>
+                <div class="dropdown-content">
+                    <a href="#mesin">MESIN</a>
+                    <a href="#informatika">INFORMATIKA</a>
+                    <a href="#elektro">ELEKTRO</a>
+                    <a href="#manajemen-bisnis">MANAJEMEN BISNIS</a>
+                </div>
+            </div>
+
+            <a href="profil.html">Profil</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Home / Beranda Section -->
+    <section class="home" id="beranda">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <h3>Selamat Datang, <span id="userName">User</span>!</h3>
+            <h1>Dashboard Web Portofolio</h1>
+            <h3>Status: <span class="typing"></span></h3>
+        </div>
+    </section>
+
+    <!-- Profil Section -->
+    <section class="profil" id="profil">
+        <h2>Profil User</h2>
+        <p>Ini adalah halaman profil user. Informasi login dan aktivitas bisa ditampilkan di sini.</p>
+    </section>
+
+    <!-- Settings Section -->
+    <section class="settings" id="settings">
+        <h2>Pengaturan</h2>
+        <p>Di sini user bisa mengubah pengaturan akun.</p>
+    </section>
+
+    <!-- Script -->
+    <script>
+        // Ambil user terakhir dari localStorage
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const lastUser = users[users.length - 1];
+        if (lastUser) {
+            document.getElementById('userName').textContent = lastUser.nim;
+        }
+
+        // Typed.js effect
+        const typed = new Typed('.typing', {
+            strings: ['Online', 'Aktif', 'Terhubung'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+
+        // Logout
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', function () {
+            alert('Anda berhasil logout!');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>
