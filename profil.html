@@ -256,6 +256,7 @@
     document.getElementById("prestasi").value = user.prestasi;
     document.getElementById("linkedin").value = user.linkedin;
     document.getElementById("instagram").value = user.instagram;
+    document.getElementById("whatsapp").value = user.whatsapp;
 
     // ======================
     // SIMPAN PROFIL
@@ -287,6 +288,7 @@
     document.getElementById("saveSosmed").addEventListener("click", () => {
       user.linkedin = document.getElementById("linkedin").value;
       user.instagram = document.getElementById("instagram").value;
+      user.instagram = document.getElementById("whatsapp").value;
       localStorage.setItem("loggedUser", JSON.stringify(user));
       alert("✅ Sosial media berhasil disimpan!");
     });
