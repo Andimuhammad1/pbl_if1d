@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="Andre" alt="Andre">
+                    <img src="../public/image/public/upload/Andre" alt="Andre">
                     <div class="team-info">
                         <h3>Andre Stanley Tambunan</h3>
                         <p>Back-End Developer</p>
