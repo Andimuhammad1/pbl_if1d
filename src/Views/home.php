@@ -72,10 +72,9 @@
                 <div class="about-text">
                     <h2>Tentang</h2>
                     <p>
-                        Platform ini bertujuan untuk menjadi platform utama bagi mahasiswa
-                        <strong>Politeknik Negeri Batam</strong>
-                        dalam mendokumentasikan dan mempresentasikan proyek mereka, dengan menyediakan
-                        antarmuka yang user-friendly.
+                        Politeknik Negeri Batam (Polibatam) merupakan satu-satunya Perguruan Tinggi Negeri (PTN) Vokasi di kawasan perdagangan dan pelabuhan bebas Batam, Bintan, dan Karimun Provinsi Kepulauan Riau.
+                        <strong>Selain terletak di salah satu kawasan pusat pertumbuhan ekonomi nasional, 
+                            Polibatam juga terletak di wilayah terdepan dan terluar wilayah Negara Kesatuan republik Indonesia yang berbatasan langsung dengan perairan internasional.</strong> 
                     </p>
                 </div>
                 <div class="about-cards">
