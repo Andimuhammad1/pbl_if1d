@@ -86,12 +86,18 @@
                     <div class="card">
                         <div class="icon"><i class='bx bxs-building-house'></i></div>
                         <h3>Politeknik Negeri Batam</h3>
-                        <p>Metode pembelajaran menggunakan project-based learning setiap semesternya.</p>
+                        <p>Alamat : Jl. Ahmad Yani Batam Kota. Kota Batam. kepulauan Riau. Indonesia 
+                            Phone : +62-778-469858 Ext.1017
+                            Fax : +62-778-463620
+                            Email : info@polibatam.ac.id.</p>
                     </div>
                     <div class="card">
                         <div class="icon"><i class='bx bxs-graduation'></i></div>
-                        <h3>Jurusan</h3>
-                        <p>Melihat profil mahasiswa berdasarkan jurusan.</p>
+                       <strong><h2>Jurusan</h2></strong>
+                        <h4><p>Manajemen dan Bisnis
+                           Teknik Elektro
+                           Teknik Informatika
+                           Teknik Mesin</p></h4>
                     </div>
                 </div>
             </div>
