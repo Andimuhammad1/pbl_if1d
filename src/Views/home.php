@@ -76,6 +76,11 @@
                         <strong>Selain terletak di salah satu kawasan pusat pertumbuhan ekonomi nasional, 
                             Polibatam juga terletak di wilayah terdepan dan terluar wilayah Negara Kesatuan republik Indonesia yang berbatasan langsung dengan perairan internasional.</strong> 
                     </p>
+                    <h2><p><strong>Visi</strong></p></h2>  
+                    <P>Visi Menjadi politeknik generasi batu yang bermutu, unggul, adaptif, inovatif, berdaya saing global serta bermitra erat dengan industri dan masyarakat untuk mendukung indonesia maju dan sejahtera.</P>
+                    
+                    <h2><p><strong>Misi</strong></p></h2>
+                    <P>Misi dari Polibatam adalah Aktif dalam proses kreasi, penyebaran dan penerapan sains dan teknologi melalui layanan pendidikan tinggi vokasi dan penelitian terapan yang bermutu, terbuka, relevan, dan berkolaborasi erat dengan masyarakat dan industri dengan penerapan tata kelola institusi yang baik untuk kehidupan bangsa yang lebih baik.</P>
                 </div>
                 <div class="about-cards">
                     <div class="card">
