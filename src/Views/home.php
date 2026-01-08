@@ -104,7 +104,7 @@
                     <img src="../public/image/poltek.jpg" alt="Andi">
                     <div class="team-info">
                         <h3>Andi Muhammad</h3>
-                        <h2>Teknik Informatika</h2>
+                        <h4> TEKNIK INFORMATIKA </h4>
                         <p>Ketua Tim & Front-End Developer</p>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     <img src="../public/image/poltek.jpg" alt="Rista">
                     <div class="team-info">
                         <h3>Rista Christy Nainggolan</h3>
-                        <h2>Teknik Informatika</h2>
+                        <h4> TEKNIK INFORMATIKA </h4>
                         <p>Analyst</p>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     <img src="../public/image/poltek.jpg" alt="Vivi">
                     <div class="team-info">
                         <h3>Vivi Regina</h3>
-                        <h2>Teknik Informatika</h2>
+                        <h4> TEKNIK INFORMATIKA</h4>
                         <p>UI/UX Designer</p>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     <img src="../public/image/public/upload/Andre" alt="Andre">
                     <div class="team-info">
                         <h3>Andre Stanley Tambunan</h3>
-                        <h2>Teknik Informatika</h2>
+                        <h4> TEKNIK INFORMATIKA </h4>
                         <p>Back-End Developer</p>
                     </div>
                 </div>
