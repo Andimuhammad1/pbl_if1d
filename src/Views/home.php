@@ -65,12 +65,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
+     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Tentang</h2>
+                    <h2><strong>Tentang</strong></h2>
                     <p>
                         Politeknik Negeri Batam (Polibatam) merupakan satu-satunya Perguruan Tinggi Negeri (PTN) Vokasi di kawasan perdagangan dan pelabuhan bebas Batam, Bintan, dan Karimun Provinsi Kepulauan Riau.
                         <strong>Selain terletak di salah satu kawasan pusat pertumbuhan ekonomi nasional, 
@@ -78,22 +78,24 @@
                     </p>
                     <h2><p><strong>Visi</strong></p></h2>  
                     <P>Visi Menjadi politeknik generasi batu yang bermutu, unggul, adaptif, inovatif, berdaya saing global serta bermitra erat dengan industri dan masyarakat untuk mendukung indonesia maju dan sejahtera.</P>
-                    
                     <h2><p><strong>Misi</strong></p></h2>
-                    <P>Misi dari Polibatam adalah Aktif dalam proses kreasi, penyebaran dan penerapan sains dan teknologi melalui layanan pendidikan tinggi vokasi dan penelitian terapan yang bermutu, terbuka, relevan, dan berkolaborasi erat dengan masyarakat dan industri dengan penerapan tata kelola institusi yang baik untuk kehidupan bangsa yang lebih baik.</P>
+                    <P>Misi dari Polibatam adalah Aktif dalam proses kreasi, penyebaran dan penerapan sains dan teknologi
+                       melalui layanan pendidikan tinggi vokasi dan penelitian terapan yang bermutu, terbuka, relevan, dan berkolaborasi erat
+                       dengan masyarakat dan industri dengan penerapan tata kelola institusi yang baik
+                    untuk kehidupan bangsa yang lebih baik.</P>
                 </div>
                 <div class="about-cards">
                     <div class="card">
                         <div class="icon"><i class='bx bxs-building-house'></i></div>
                         <h3>Politeknik Negeri Batam</h3>
-                        <p>Alamat : Jl. Ahmad Yani Batam Kota. Kota Batam. kepulauan Riau. Indonesia 
-                            Phone : +62-778-469858 Ext.1017
-                            Fax : +62-778-463620
-                            Email : info@polibatam.ac.id.</p>
+                        <p>Alamat : Jl. Ahmad Yani Batam Kota. Kota Batam. kepulauan Riau. Indonesia
+                           Phone : +62-778-469858 Ext.1017
+                           Fax : +62-778-463620
+                           Email : info@polibatam.ac.id</p>
                     </div>
                     <div class="card">
                         <div class="icon"><i class='bx bxs-graduation'></i></div>
-                       <strong><h2>Jurusan</h2></strong>
+                        <strong><h2>Jurusan</h2></strong>
                         <h4><p>Manajemen dan Bisnis
                            Teknik Elektro
                            Teknik Informatika
@@ -104,14 +106,15 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+
+  <!-- Team Section -->
     <section class="team-section" id="team">
         <div class="container">
             <h2 style="text-align: center;">Anggota Tim</h2>
             <p class="subtitle" style="text-align: center;">Cek Tim Kami</p>
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="../public/image/poltek.jpg" alt="Andi">
+                    <img src="../public/image/andi.jpeg" alt="Andi">
                     <div class="team-info">
                         <h3>Andi Muhammad</h3>
                         <h4> TEKNIK INFORMATIKA </h4>
@@ -119,23 +122,23 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="../public/image/poltek.jpg" alt="Rista">
+                    <img src="../public/image/vivi.jpeg" alt="Vivi">
                     <div class="team-info">
-                        <h3>Rista Christy Nainggolan</h3>
-                        <h4> TEKNIK INFORMATIKA </h4>
+                        <h3>Vivi Regina</h3>
+                        <h4> TEKNIK INFORMATIKA</h4>
                         <p>Analyst</p>
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="../public/image/poltek.jpg" alt="Vivi">
+                    <img src="../public/image/Rista.jpeg" alt="Rista">
                     <div class="team-info">
-                        <h3>Vivi Regina</h3>
-                        <h4> TEKNIK INFORMATIKA</h4>
+                        <h3>Rista Christy Nainggolan</h3>
+                        <h4> TEKNIK INFORMATIKA </h4>
                         <p>UI/UX Designer</p>
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="../public/image/public/upload/Andre" alt="Andre">
+                    <img src="../public/image/andre.jpeg"alt="Andre">
                     <div class="team-info">
                         <h3>Andre Stanley Tambunan</h3>
                         <h4> TEKNIK INFORMATIKA </h4>

@@ -22,7 +22,7 @@
     <?php include __DIR__ . '/../partials/header.php'; ?>
 
     <div class="container">
-        <h1> Portofolio Saya </h1>
+        <h1>Portofolio Saya</h1>
         <a href="index.php?page=create_portfolio" class="btn"> + Tambah Portofolio</a>
 
         <div class="portfolio-grid">
